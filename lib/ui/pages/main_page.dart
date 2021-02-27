@@ -7,6 +7,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   String _jsonContent = "";
+  bool isFetching = true;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class _MainPageState extends State<MainPage> {
         elevation: 0,
         backgroundColor: mainColor,
         title: Text(
-          "Quran FL",
+          "The Noble Qur'an",
         ),
       ),
       body: SafeArea(
