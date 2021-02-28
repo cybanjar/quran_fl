@@ -6,58 +6,49 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  String _jsonContent = "";
-  bool isFetching = true;
+  // String _jsonContent = "";
+  // bool isFetching = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: mainColor,
-        title: Text(
-          "The Noble Qur'an",
-        ),
-      ),
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  RaisedButton(
-                    onPressed: () {
-                      _loadSampleJson();
-                    },
-                    child: Text("Read JSON File"),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 12.0),
-                child: Text(
-                  _jsonContent,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ],
+        backgroundColor: Colors.white,
+        title: Align(
+          alignment: Alignment.center,
+          child: Text(
+            "Qur'an Apps",
+            style: mainTextFont.copyWith(fontWeight: FontWeight.w900),
           ),
         ),
+      ),
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: defaultMargin),
+            child: Container(
+              margin: EdgeInsets.only(top: 16, bottom: 16),
+              child: Text(
+                "Assalamualaikum",
+                style: greyTextFont.copyWith(
+                    fontSize: 18, fontWeight: FontWeight.w300),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 
-  Future _loadSampleJson() async {
-    String jsonString = await rootBundle.loadString("assets/sample.json");
-    final jsonData = json.decode(jsonString);
-    Sample sample = Sample.fromJson(jsonData);
-    setState(() {
-      _jsonContent = sample.toString();
-    });
-  }
+  // Future _loadSampleJson() async {
+  //   String jsonString = await rootBundle.loadString("assets/sample.json");
+  // final jsonData = json.decode(jsonString);
+
+  // Sample sample = Sample.fromJson(jsonData);
+  // setState(() {
+  //   _jsonContent = sample.email.toString();
+  //   print(_jsonContent);
+  // });
+  // }
 }

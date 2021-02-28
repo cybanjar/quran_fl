@@ -1,9 +1,12 @@
 import 'dart:convert';
+// import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quran_fl/models/models.dart';
 import 'package:quran_fl/shared/shared.dart';
+// import 'dart:developer' as developer;
 
 part 'wrapper.dart';
 part 'main_page.dart';
+part 'detail_surah.dart';
