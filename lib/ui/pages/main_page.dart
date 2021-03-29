@@ -126,6 +126,10 @@ class _MainPageState extends State<MainPage> {
             ),
             trailing: Icon(Icons.keyboard_arrow_right),
             selected: true,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text("Save"),
           )
         ],
       ),
@@ -135,11 +139,11 @@ class _MainPageState extends State<MainPage> {
   // Future _loadSampleJson() async {
   //   String jsonString = await rootBundle.loadString("assets/sample.json");
   // final jsonData = json.decode(jsonString);
-
   // Sample sample = Sample.fromJson(jsonData);
+
   // setState(() {
   //   _jsonContent = sample.email.toString();
-  //   print(_jsonContent);
+  //   print(sample);
   // });
   // }
 }
